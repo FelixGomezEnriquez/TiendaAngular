@@ -1,0 +1,13 @@
+.infoButton {
+  margin-left: 5px;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comments {
+  max-width: 800px;
+}

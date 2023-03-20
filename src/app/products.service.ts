@@ -7,59 +7,68 @@ import { of } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductsService {
-  productos: Producto[];
+  products: Producto[];
 
   constructor() {
-    this.productos = [
+    this.products = [
       {
-        nombre: 'Bolso',
-        precio: 20,
-        imagen: 'https://source.unsplash.com/random/500x500/?handbag',
+        name: 'Bolso',
+        price: 20,
+        image: 'https://source.unsplash.com/random/500x500/?handbag',
+        description: 'Bolso de piel',
       },
       {
-        nombre: 'Zapatos',
-        precio: 50,
-        imagen: 'https://source.unsplash.com/random/500x500/?shoes',
+        name: 'Zapatos',
+        price: 50,
+        image: 'https://source.unsplash.com/random/500x500/?shoes',
+        description: 'Zaaptos gucci',
       },
       {
-        nombre: 'Camiseta',
-        precio: 15,
-        imagen: 'https://source.unsplash.com/random/500x500/?t-shirt',
+        name: 'Camiseta',
+        price: 15,
+        image: 'https://source.unsplash.com/random/500x500/?t-shirt',
+        description: 'Camiseta luis vutin',
       },
       {
-        nombre: 'Vestido',
-        precio: 30,
-        imagen: 'https://source.unsplash.com/random/500x500/?dress',
+        name: 'Vestido',
+        price: 30,
+        image: 'https://source.unsplash.com/random/500x500/?dress',
+        description: 'Vestido versacce',
       },
       {
-        nombre: 'Vaqueros',
-        precio: 20,
-        imagen: 'https://source.unsplash.com/random/500x500/?jeans',
+        name: 'Vaqueros',
+        price: 20,
+        image: 'https://source.unsplash.com/random/500x500/?jeans',
+        description: 'Vaqueros nuevos',
       },
       {
-        nombre: 'Chándal',
-        precio: 60,
-        imagen: 'https://source.unsplash.com/random/500x500/?tracksuit',
+        name: 'Chándal',
+        price: 60,
+        image: 'https://source.unsplash.com/random/500x500/?tracksuit',
+        description: 'Chandal nike ',
       },
       {
-        nombre: 'Anillos',
-        precio: 20,
-        imagen: 'https://source.unsplash.com/random/500x500/?ring',
+        name: 'Anillos',
+        price: 20,
+        image: 'https://source.unsplash.com/random/500x500/?ring',
+        description: 'Anillo 23kilates',
       },
       {
-        nombre: 'Cinturon',
-        precio: 10,
-        imagen: 'https://source.unsplash.com/random/500x500/?belt',
+        name: 'Cinturon',
+        price: 10,
+        image: 'https://source.unsplash.com/random/500x500/?belt',
+        description: 'Cinturon POLO',
       },
       {
-        nombre: 'Chaqueta',
-        precio: 40,
-        imagen: 'https://source.unsplash.com/random/500x500/?jacket',
+        name: 'Chaqueta',
+        price: 40,
+        image: 'https://source.unsplash.com/random/500x500/?jacket',
+        description: 'Chaqueta de cuero',
       },
     ];
   }
 
   leerBBDD(): Observable<Producto[]> {
-    return of(this.productos);
+    return of(this.products);
   }
 }

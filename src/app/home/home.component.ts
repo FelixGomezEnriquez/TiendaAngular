@@ -12,8 +12,7 @@ export class HomeComponent {
   ngOnInit() {
     this.items = [
       { label: 'Inicio', icon: 'pi pi-fw pi-home', routerLink: 'inicio' },
-      { label: 'Productos', icon: 'pi pi-fw pi-file', routerLink: 'productos' },
-      { label: 'Cesta', icon: 'pi pi-cart-plus', routerLink: 'cesta' },
+      { label: 'Productos', icon: 'pi pi-fw pi-tags', routerLink: 'productos' },
     ];
     this.activeItem = this.items[0];
   }

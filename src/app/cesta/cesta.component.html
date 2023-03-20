@@ -1,1 +1,9 @@
-<p>cesta works!</p>
+<p-sidebar [(visible)]="display" position="right" [dismissible]="false" [showCloseIcon]="false">
+  <p-button (click)=" close()" icon="pi pi-times">
+  </p-button>
+
+  <ng-template pTemplate=" header">Headedsdsr Content</ng-template>
+  <ng-template pTemplate="content">Body dsdContent</ng-template>
+  <ng-template pTemplate="footer">Footer sdsdsdContent</ng-template>
+
+</p-sidebar>

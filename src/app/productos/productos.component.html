@@ -1,1 +1,10 @@
-<p>productos works!</p>
+<div class="producto">
+  <div *ngFor="let product of products">
+
+    <app-detail-product [product]="product"></app-detail-product>
+
+  </div>
+
+</div>
+
+

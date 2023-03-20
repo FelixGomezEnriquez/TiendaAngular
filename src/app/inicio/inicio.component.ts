@@ -1,20 +1,30 @@
 import { Component } from '@angular/core';
 import { Producto } from '../producto';
 import { ProductsService } from '../products.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent {
-  productos: Producto[];
+  products: Producto[];
+  display: boolean;
   responsiveOptions: any[] = [];
 
-  constructor(private productsService: ProductsService) {
-    productsService.leerBBDD().subscribe((res) => {
-      this.productos = res;
+  constructor(
+    private productsService: ProductsService,
+    private router: Router
+  ) {
+    this.productsService.leerBBDD().subscribe((res) => {
+      this.products = res;
       console.log(res);
     });
+  }
+
+  details(product: Producto) {
+    this.router.navigate(['detail-product', product.name]);
   }
 
   NgOnInit() {
@@ -35,5 +45,8 @@ export class InicioComponent {
         numScroll: 1,
       },
     ];
+  }
+  NgOnChange(){
+
   }
 }

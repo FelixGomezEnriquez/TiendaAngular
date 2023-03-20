@@ -1,0 +1,67 @@
+<div *ngIf="product!=null">
+
+  <p-card header="{{product.name}}" subheader="{{product.price}} €" [style]="{width: '360px', margin:'20px'}"
+    styleClass="p-card-shadow">
+
+    <ng-template pTemplate="header">
+
+      <img alt="Card" src="{{product.image}}">
+
+    </ng-template>
+
+    <p>
+      {{product.description}}
+    </p>
+    <ng-template pTemplate="footer">
+
+      <p-button label="Comprar" icon="pi pi-cart-plus" (click)="display=true"></p-button>
+
+      <p-button label="Informacion" styleClass="p-button p-button-secondary" (click)="details(product)"
+        class="infoButton" icon="pi pi-info-circle">
+      </p-button>
+
+    </ng-template>
+
+  </p-card>
+
+</div>
+
+<div *ngIf="product==null" class="productInfo">
+  <p-card header="{{productInfo.name}}" subheader="{{productInfo.price}} €" [style]="{width: '360px', margin:'20px'}"
+    styleClass="p-card-shadow">
+
+    <ng-template pTemplate="header">
+      <img alt="Card" src="{{productInfo.image}}">
+    </ng-template>
+
+    <p>
+      {{productInfo.description}}
+    </p>
+
+    <ng-template pTemplate="footer">
+
+      <p-button label="Comprar" icon="pi pi-cart-plus" (click)="display=true"></p-button>
+    </ng-template>
+
+  </p-card>
+
+  <div class="comments">
+    <h2>Opinion media</h2>
+    <p-rating [(ngModel)]="val5" [cancel]="false" [stars]="5" [readonly]="true">
+    </p-rating>
+    <hr>
+    <h2>Opiniones de cliente</h2>
+    <p-panel header="Comentario 1" [toggleable]="true">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna
+        aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </p-panel>
+
+
+  </div>
+
+</div>
+
+
+<app-cesta [display]="display" (changeDisplay)="display=$event"></app-cesta>
