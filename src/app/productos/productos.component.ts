@@ -18,4 +18,6 @@ export class ProductosComponent {
       this.products = res;
     });
   }
+
+ 
 }

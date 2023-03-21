@@ -19,8 +19,8 @@
           <h4>{{product.name}}</h4>
           <h6>{{product.price}}€</h6>
           <div class="car-buttons mt-5">
-            <p-button type="button" (click)="display=true" styleClass="p-button p-button-warning p-button-rounded mr-2"
-              icon="pi pi-cart-plus"></p-button>
+            <p-button type="button"  (click)="display=true; add(product)" 
+              styleClass="p-button p-button-warning p-button-rounded mr-2" icon="pi pi-cart-plus"></p-button>
             <p-button type="button" (click)="details(product)" styleClass="p-button p-button-info p-button-rounded mr-2"
               icon="pi pi-info-circle"></p-button>
           </div>
@@ -31,4 +31,4 @@
   </ng-template>
 </p-carousel>
 
-<app-cesta [display]="display" (changeDisplay)="display=$event"></app-cesta>
+<app-cesta [display]="display"  (changeDisplay)="display=$event"></app-cesta>

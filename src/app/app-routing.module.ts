@@ -8,7 +8,8 @@ import { ProductosComponent } from './productos/productos.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
-  { path: 'cesta', component: CestaComponent },
+  { path: 'cesta/', component: CestaComponent },
+  { path: 'cesta/:display', component: CestaComponent },
   { path: 'inicio', component: InicioComponent },
   { path: 'productos', component: ProductosComponent },
   { path: 'detail-product/:id', component: DetailProductComponent },

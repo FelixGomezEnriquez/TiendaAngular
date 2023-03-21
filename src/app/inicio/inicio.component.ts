@@ -10,6 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class InicioComponent {
   products: Producto[];
+  product: Producto;
   display: boolean;
   responsiveOptions: any[] = [];
 
@@ -25,6 +26,11 @@ export class InicioComponent {
 
   details(product: Producto) {
     this.router.navigate(['detail-product', product.name]);
+  }
+  add(product:Producto){
+    
+    this.productsService.addProduct(product);
+    
   }
 
   NgOnInit() {
@@ -46,7 +52,5 @@ export class InicioComponent {
       },
     ];
   }
-  NgOnChange(){
-
-  }
+  NgOnChange() {}
 }

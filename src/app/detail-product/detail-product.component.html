@@ -14,7 +14,7 @@
     </p>
     <ng-template pTemplate="footer">
 
-      <p-button label="Comprar" icon="pi pi-cart-plus" (click)="display=true"></p-button>
+      <p-button label="Comprar" icon="pi pi-cart-plus" (click)="display=true;add(product)"></p-button>
 
       <p-button label="Informacion" styleClass="p-button p-button-secondary" (click)="details(product)"
         class="infoButton" icon="pi pi-info-circle">
@@ -40,7 +40,7 @@
 
     <ng-template pTemplate="footer">
 
-      <p-button label="Comprar" icon="pi pi-cart-plus" (click)="display=true"></p-button>
+      <p-button label="Comprar" icon="pi pi-cart-plus" (click)="display=true;add(productInfo)"></p-button>
     </ng-template>
 
   </p-card>

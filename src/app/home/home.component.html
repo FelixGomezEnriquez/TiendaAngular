@@ -1,2 +1,5 @@
 <p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
 <router-outlet></router-outlet>
+
+
+<app-cesta [display]="display" (changeDisplay)="display=$event"></app-cesta>

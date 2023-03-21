@@ -30,4 +30,7 @@ export class DetailProductComponent {
   details(product: Producto) {
     this.router.navigate(['detail-product', product.name]);
   }
+  add(product: Producto) {
+    this.productsService.addProduct(product);
+  }
 }

@@ -10,6 +10,9 @@ import { CardModule } from 'primeng/card';
 import { SidebarModule } from 'primeng/sidebar';
 import { PanelModule } from 'primeng/panel';
 import { RatingModule } from 'primeng/rating';
+import { OrderListModule } from 'primeng/orderlist';
+import { TableModule } from 'primeng/table';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CestaComponent } from './cesta/cesta.component';
@@ -44,6 +47,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PanelModule,
     RatingModule,
     FormsModule,
+    OrderListModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
