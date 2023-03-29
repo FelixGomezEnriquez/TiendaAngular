@@ -102,6 +102,7 @@ export class ProductsService {
 
   readAddedProducts(): Observable<Producto[]> {
     console.log(this.addedProducts);
+    //prueba
     return of(this.addedProducts);
   }
 
