@@ -1,5 +1,4 @@
-<p-sidebar class="p-sidebar-lg" [(visible)]="display" position="right" [fullScreen]="true" [dismissible]="false"
-  [showCloseIcon]="false">
+<p-sidebar class="p-sidebar-lg" [(visible)]="display" position="right" [dismissible]="false" [showCloseIcon]="false">
   <h2>Cesta</h2>
 
   <p-button class="closeButton" (click)=" close()" icon="pi pi-times">
@@ -23,6 +22,12 @@
       </tr>
     </ng-template>
   </p-table>
+
+  <div class="total">
+
+    <p>Total: {{total}}</p>
+
+  </div>
 
 
   <ng-template pTemplate="footer">Realizado por Felix Gomez Enriquez</ng-template>

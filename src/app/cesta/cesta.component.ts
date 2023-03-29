@@ -13,6 +13,7 @@ export class CestaComponent {
   @Input() display: boolean;
   @Output() changeDisplay = new EventEmitter<boolean>();
   addedProducts: Producto[];
+  total: number = 0;
 
   constructor(
     private productsService: ProductsService,
@@ -28,8 +29,26 @@ export class CestaComponent {
       this.addedProducts = res;
       console.log(this.addedProducts);
     });
+    this.calcularTotal();
   }
 
+  calcularTotal() {
+    let totalProducto;
+    let totales: any[] = [];
+    this.addedProducts.forEach((element) => {
+      element.quantity != null
+        ? (totalProducto = element.price * element.quantity)
+        : (totalProducto = element.price);
+      totales.push(totalProducto);
+    });
+
+    totales.forEach((element) => {
+      console.log(element);
+      this.total += element;
+      console.log(this.total);
+    });
+    console.log(this.total);
+  }
   close() {
     this.display = false;
     this.changeDisplay.emit(this.display);
